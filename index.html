@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Onam-Greeting-2027 | Cinematic Animated Kerala Video Card</title>
+  
+  <!-- Kerala Royal Aesthetic Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Manjari:wght@400;700&family=Noto+Sans+Malayalam:wght@400;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top Header Banner -->
+  <header class="app-header">
+    <div class="title-badge">
+      <span class="dot"></span>
+      <span>ROYAL KERALA FESTIVAL CINEMA • 9:16</span>
+    </div>
+    <h1 class="main-title">ONAM GREETING 2027</h1>
+    <div class="malayalam-subtitle">ഹൃദയം നിറഞ്ഞ തിരുവോണാശംസകൾ 🌺</div>
+  </header>
+
+  <!-- Scene Navigation Pills -->
+  <nav class="scene-nav-bar" aria-label="Scene selector">
+    <button class="scene-pill active" data-scene="1" data-time="0">
+      <span class="pill-num">1</span>
+      <span>The Arrival of Maveli</span>
+    </button>
+    <button class="scene-pill" data-scene="2" data-time="7.5">
+      <span class="pill-num">2</span>
+      <span>The Beautiful Pookalam</span>
+    </button>
+    <button class="scene-pill" data-scene="3" data-time="15.0">
+      <span class="pill-num">3</span>
+      <span>The Spirit of Kerala</span>
+    </button>
+    <button class="scene-pill" data-scene="4" data-time="22.5">
+      <span class="pill-num">4</span>
+      <span>Grand Celebration</span>
+    </button>
+    <button class="scene-pill" data-scene="5" data-time="30.5">
+      <span class="pill-num">5</span>
+      <span>Final Royal Greeting</span>
+    </button>
+  </nav>
+
+  <!-- Main Studio Workspace -->
+  <main class="studio-container">
+    
+    <!-- Vertical 9:16 Mobile Phone Bezel / Reels Mockup -->
+    <div class="phone-mockup">
+      <div class="video-container" id="videoContainer">
+        <!-- Exact 1080x1920 high-fidelity rendering canvas -->
+        <canvas id="videoCanvas" width="1080" height="1920"></canvas>
+        <div class="reels-badge-overlay">9:16 • 1080×1920</div>
+      </div>
+    </div>
+
+    <!-- Media Player Control Bar -->
+    <div class="player-controls">
+      
+      <!-- Time Scrubber Row -->
+      <div class="timeline-row">
+        <span class="time-display" id="timeDisplay">00:00.0 / 00:38.0</span>
+        <input type="range" class="scrubber-slider" id="timeSlider" min="0" max="38" step="0.05" value="0" aria-label="Timeline scrubber">
+      </div>
+
+      <!-- Playback Buttons Row -->
+      <div class="buttons-row">
+        
+        <div class="left-controls">
+          <!-- Replay -->
+          <button class="ctrl-btn" id="replayBtn" title="Replay from start (R)" aria-label="Replay">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M1 4v6h6"></path>
+              <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path>
+            </svg>
+          </button>
+
+          <!-- Audio Volume / Mute -->
+          <div class="audio-control-group">
+            <button class="ctrl-btn" id="muteBtn" title="Toggle Mute (M)" aria-label="Mute audio">🔊</button>
+            <input type="range" class="volume-slider" id="volumeSlider" min="0" max="1" step="0.05" value="0.85" title="Volume" aria-label="Volume slider">
+          </div>
+        </div>
+
+        <!-- Central Primary Play/Pause Button -->
+        <button class="play-primary-btn" id="playBtn" title="Play / Pause (Space)" aria-label="Play or Pause">
+          <svg id="playIcon" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+          </svg>
+          <svg id="pauseIcon" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="display: none;">
+            <rect x="6" y="4" width="4" height="16"></rect>
+            <rect x="14" y="4" width="4" height="16"></rect>
+          </svg>
+        </button>
+
+        <div class="right-controls">
+          <!-- Fullscreen -->
+          <button class="ctrl-btn" id="fullscreenBtn" title="Fullscreen (F)" aria-label="Toggle Fullscreen">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Action Toolbar (Export Video & Cover Poster) -->
+    <div class="action-toolbar">
+      <button class="action-btn btn-export-mp4" id="exportBtn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polyline points="12 8 12 12 14 14"></polyline>
+          <path d="M12 16v.01"></path>
+        </svg>
+        <span>Export 1080×1920 Video</span>
+      </button>
+
+      <button class="action-btn btn-poster" id="posterBtn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+          <circle cx="12" cy="13" r="4"></circle>
+        </svg>
+        <span>Save HD Poster</span>
+      </button>
+    </div>
+
+    <!-- Video Specifications Badge Footer -->
+    <div class="specs-card">
+      <div class="spec-item">
+        <span class="spec-icon">📱</span>
+        <span>Vertical 9:16</span>
+      </div>
+      <div class="spec-item">
+        <span class="spec-icon">✨</span>
+        <span>1080 × 1920 Full HD</span>
+      </div>
+      <div class="spec-item">
+        <span class="spec-icon">⏱️</span>
+        <span>38s Reels Duration</span>
+      </div>
+      <div class="spec-item">
+        <span class="spec-icon">🥁</span>
+        <span>Live Chenda Melam Audio</span>
+      </div>
+      <div class="spec-item">
+        <span class="spec-icon">💬</span>
+        <span>WhatsApp & Instagram Ready</span>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Exporting Progress Modal -->
+  <div class="modal-backdrop" id="recordModal" role="dialog" aria-modal="true">
+    <div class="modal-box">
+      <h3 class="modal-title">Exporting 1080×1920 Video</h3>
+      <p class="modal-desc">
+        Rendering and encoding 60 FPS video with synchronized Chenda Melam festive audio...
+      </p>
+
+      <div class="progress-track">
+        <div class="progress-fill" id="recordProgressBar"></div>
+      </div>
+
+      <div class="progress-info">
+        <span>Progress</span>
+        <span id="recordProgressText">0%</span>
+      </div>
+
+      <div class="record-status-pill" id="recordStatusText">
+        Initializing audio and video recorder...
+      </div>
+
+      <button class="cancel-btn" id="cancelRecordBtn">Cancel Export</button>
+    </div>
+  </div>
+
+  <!-- Application Modules -->
+  <script src="audio.js"></script>
+  <script src="maveli_data.js"></script>
+  <script src="pookalam_data.js"></script>
+  <script src="graphics.js"></script>
+  <script src="particles.js"></script>
+  <script src="scenes.js"></script>
+  <script src="recorder.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
+
